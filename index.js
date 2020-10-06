@@ -17,7 +17,8 @@ Do the following:
 
    HINT: no function required
 */
-
+const votingAge = 18
+console.log(true)
 
 
 /*
@@ -31,9 +32,13 @@ Do the following:
    HINT: no function required
 */
 
+let variable1 = "hairo"
+let variable2 = "tania"
+if(variable2 === "tania"){
+  variable1 = "joseph"
+}
 
-
-
+console.log(variable1)
 
 /*
 Task 1c - Convert Strings to Numbers
@@ -45,6 +50,14 @@ Do the following:
 
    HINT: look up the Number method
 */
+let str = "1999"
+
+function toNumber (){
+  Number(str);
+  return str;
+}
+console.log(toNumber());
+
 
 
 
@@ -58,7 +71,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
+function multiply(a,b/*add your code here*/){
+  return a * b;
     /*add your code here*/
   }
 
