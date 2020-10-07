@@ -177,7 +177,6 @@ Use the game function below to do the following:
 
 function game(playerChoice,computerChoice/*add your code here*/){
   computerChoice = Math.random();
-  playerChoice = Math.random()
   if (computerChoice < 0.34) {
     computerChoice = "rock";
   } 
@@ -187,31 +186,23 @@ function game(playerChoice,computerChoice/*add your code here*/){
   else {
     computerChoice = "scissors";
   }
-  if (playerChoice < 0.34) {
-    playerChoice = "rock";
-  }
-  else if(playerChoice <= 0.67) {
-    playerChoice = "paper";
-  }
-  else {
-    playerChoice = "scissors";
-  }
   if (playerChoice === computerChoice){
     return "it's a tie";
   }
-  else if (playerChoice === "rock" && computerChoice === "scissors"){
-    return "you win!";
+  else if (computerChoice === "scissors"){
+    return "you lose!";
   }
-  else if (playerChoice === "paper" && computerChoice === "rock"){
-    return "you win!";
+  else if (computerChoice === "rock"){
+    return "it's a tie";
   }
-  else if (playerChoice === "scissors" && computerChoice === "paper"){
-    return "you win!";
+  else if (computerChoice === "paper"){
+    return "you lose!";
   }
   else {
-    return "you lose!";
+    return "you win!";
   } 
 }
+game("rock");
 
   
   
