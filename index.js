@@ -178,13 +178,13 @@ Use the game function below to do the following:
 function game(playerChoice,computerChoice/*add your code here*/){
   computerChoice = Math.floor(Math.random() * 3)
   if(playerChoice === "rock" && computerChoice === 0){
-    return "it's a tie"
+    return "it's a tie";
   }
   else if(playerChoice === "paper" && computerChoice === 1){
-    return"you lose"
+    return"you lose";
   }
   else{
-    return "you win"
+    return "you win";
   }
   
 }
