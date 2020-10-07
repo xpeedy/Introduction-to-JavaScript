@@ -176,21 +176,19 @@ Use the game function below to do the following:
 */
 
 function game(playerChoice,computerChoice/*add your code here*/){
-  computerChoice = Math.random();
-  if(computerChoice <= 0.36){
-    computerChoice === "rock"
-  }
-  else if(computerChoice <= 0.37){
-    computerChoice === "paper"
-  }
-  else {
-    computerChoice === "scissors"
-  }
-  if(playerChoice === computerChoice){
+  computerChoice = Math.floor(Math.random() * 3)
+  if(playerChoice === "rock" && computerChoice === 0){
     return "it's a tie"
   }
+  else if(playerChoice === "paper" && computerChoice === 1){
+    return"you lose"
+  }
+  else{
+    return "you win"
+  }
+  
 }
-
+console.log(game("rock"))
 
   
   
