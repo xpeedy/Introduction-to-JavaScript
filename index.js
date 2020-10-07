@@ -177,18 +177,27 @@ Use the game function below to do the following:
 
 function game(playerChoice,computerChoice/*add your code here*/){
   computerChoice = Math.random();
-  playerChoice = "rock"
+  playerChoice = Math.random()
   if (computerChoice < 0.34) {
-      computerChoice = "rock";
+    computerChoice = "rock";
   } 
   else if(computerChoice <= 0.67) {
-      computerChoice = "paper";
+    computerChoice = "paper";
   } 
   else {
-      computerChoice = "scissors";
+    computerChoice = "scissors";
+  }
+  if (playerChoice < 0.34) {
+    playerChoice = "rock";
+  }
+  else if(playerChoice <= 0.67) {
+    playerChoice = "paper";
+  }
+  else {
+    playerChoice = "scissors";
   }
   if (playerChoice === computerChoice){
-    return "it's a tie!"
+    return "it's a tie";
   }
   else if (playerChoice === "rock" && computerChoice === "scissors"){
     return "you win!";
@@ -203,7 +212,7 @@ function game(playerChoice,computerChoice/*add your code here*/){
     return "you lose!";
   } 
 }
-console.log(game("rock"))
+
   
   
 
@@ -234,9 +243,12 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(cm/*add your code here*/){
     /*add your code here*/
+    let feet = cm / 30.48;
+    return feet;
   }
+  console.log(feet())
  
 
 
@@ -250,9 +262,13 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(bottlesN/*add your code here*/){
+  while(bottlesN >= 5) {
+    return `${bottlesN} bottles of soda on the wall, ${bottlesN} bottles of soda, take one down pass it around ${bottlesN - 1} bottles of soda on the wall`;
   }
+  return annoyingSong();      
+}
+
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -270,11 +286,24 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(score/*add your code here*/){
+  if( score >= 90){
+    return "A";
   }
-  
-  
+  else if (score >= 80 && score < 90){
+    return "you got a B";
+  }
+  else if (score >= 70 && score < 80){
+    return "C";
+  }
+  else if (score >= 60 && score < 70){
+    return "D";
+  }
+  else {
+    return "F";
+  }
+  /*add your code here*/
+}  
   
   
 
