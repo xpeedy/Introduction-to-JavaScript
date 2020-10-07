@@ -17,9 +17,16 @@ Do the following:
 
    HINT: no function required
 */
-const votingAge = 18
-console.log(true)
+const votingAge = 18;
 
+if(votingAge>17){
+   true;
+}
+else{
+   false;
+}
+
+console.log(votingAge)
 
 /*
 Task 1b - Values
@@ -53,8 +60,8 @@ Do the following:
 let str = "1999"
 
 function toNumber (){
-  Number(str);
-  return str;
+  let newNumber = Number(str);
+  return newNumber;
 }
 console.log(toNumber());
 
@@ -72,10 +79,11 @@ Do the following:
 */
 
 function multiply(a,b/*add your code here*/){
-  return a * b;
+  let result = a * b
+  return result;
     /*add your code here*/
   }
-
+multiply(1,2)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -93,7 +101,7 @@ function dogYears(a/*add your code here*/){
     /*add your code here*/
 }
 
-
+dogYears(5)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -125,32 +133,34 @@ Use the hungryDog function and feeding requirements below to do the following:
 function hungryDog(weight,age/*add your code here*/){
   if(age >= 1){
     if(weight <= 5){
-      weight * .05;
+       weight * .05;
     }
     if(weight >= 6 || weight <= 10){
-      weight * .04;
+       weight * .04;
     }
     if(weight >= 11 || weight <= 15){
       return weight * .03;
     }
     else{weight * .02} 
-    return weight; 
+       
     /*add your code here*/
   }
   if(age < 12/12){
-    if(age >= 1/12 || age <= 4/12){
-      weight * .10;
+    if(age >= 1/12 && age <= 4/12){
+      return weight * .10;
     }
-    if(age >= 5/12 || age <= 7/12){
-      weight * .05;
+    if(age >= 5/12 && age <= 7/12){
+      return weight * .05;
     }
-    if(age >= 8/12 || age <= 12/12){
-      weight * .04;
+    if(age >= 8/12 && age <= 12/12){
+      return weight * .04;
     }
-    return hungryDog()
+    
   }
+  
   console.log(weight);
 }
+
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 // Rock, Paper, Scissors - Let's play against the computer!
@@ -165,9 +175,35 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
+function game(playerChoice,computerChoice/*add your code here*/){
+  computerChoice = Math.random();
+  playerChoice = "rock"
+  if (computerChoice < 0.34) {
+      computerChoice = "rock";
+  } 
+  else if(computerChoice <= 0.67) {
+      computerChoice = "paper";
+  } 
+  else {
+      computerChoice = "scissors";
+  }
+  if (playerChoice === computerChoice){
+    return "it's a tie!"
+  }
+  else if (playerChoice === "rock" && computerChoice === "scissors"){
+    return "you win!";
+  }
+  else if (playerChoice === "paper" && computerChoice === "rock"){
+    return "you win!";
+  }
+  else if (playerChoice === "scissors" && computerChoice === "paper"){
+    return "you win!";
+  }
+  else {
+    return "you lose!";
+  } 
 }
+console.log(game("rock"))
   
   
 
@@ -182,8 +218,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
+function miles(kilometers/*add your code here*/){
     /*add your code here*/
+    let miles = kilometers * 0.621371;
+    return miles;
   }
 
 
